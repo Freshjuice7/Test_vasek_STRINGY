@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Uzivatel uzivatel = new Uzivatel("Jan 45Karel 54212Kryštof"," N5..o,v55a..k","2008-01-02","pepanovak@gmail.com","****");
+        Uzivatel uzivatel = new Uzivatel("Jan 45Karel 54212Kryštof"," N5..o,v55a..k","2008-01-02","pepanovak@gmail.com","asdaba");
         System.out.println(uzivatel.upravPrijmeni());
         System.out.println(uzivatel.upravJmeno());
 

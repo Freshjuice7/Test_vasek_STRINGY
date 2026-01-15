@@ -58,7 +58,6 @@ public class Uzivatel {
     }
 
 
-
     public StringBuffer udelejEmail() {
         StringBuffer sbPrijmeni = new StringBuffer(upravPrijmeni());
         StringBuffer sbJmeno = new StringBuffer(upravJmeno());
@@ -69,44 +68,41 @@ public class Uzivatel {
         mail.append(randomNum);
         mail.append("@");
         mail.append("seznam.cz");
-       return mail;
+        return mail;
 
     }
 
-   public Boolean zkontrolujEmail() {
+    public Boolean zkontrolujEmail() {
         StringBuffer sbmail = new StringBuffer(email);
         Boolean ok = true;
         String zatecka;
-        if(sbmail.isEmpty()){
-            ok=false;
+        if (sbmail.isEmpty()) {
+            ok = false;
         }
-        if(sbmail.indexOf("@")==-1){
-            ok=false;
+        if (sbmail.indexOf("@") == -1) {
+            ok = false;
         }
 
-        if(sbmail.indexOf(".")!=-1){
-            for(int i=sbmail.indexOf(".");i<sbmail.length();i++){
-                if(sbmail.charAt(i)==' '){
-                    ok=false;
+        if (sbmail.indexOf(".") != -1) {
+            for (int i = sbmail.indexOf("."); i < sbmail.length(); i++) {
+                if (sbmail.charAt(i) == ' ') {
+                    ok = false;
                 }
-                if(sbmail.charAt(i) == '@'){
-                    ok=false;
+                if (sbmail.charAt(i) == '@') {
+                    ok = false;
                 }
-        }
+            }
 
+        } else {
+            ok = false;
         }
-        else{
-            ok=false;
-        }
-
-
 
 
         return ok;
     }
 
     public void sifraEmail() {
-        if(zkontrolujEmail()) {
+        if (zkontrolujEmail()) {
             StringBuffer sb = new StringBuffer(email);
             StringBuffer sifra = new StringBuffer();
             String sb2;
@@ -129,7 +125,6 @@ public class Uzivatel {
         }
     }
 
-    public String toString ="Jméno: "+ upravJmeno().toString()+" Přijmení:" + upravPrijmeni().toString()+" Email:"+ email.toString()+ " Heslo: "+ heslo.toString() ;
 
 
     public String getJmeno() {
