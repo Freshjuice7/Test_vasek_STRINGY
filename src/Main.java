@@ -12,6 +12,7 @@ public class Main {
         System.out.println("Korektnost emailu je: " + uzivatel.zkontrolujEmail());
         uzivatel.sifraEmail();
 
+        uzivatel.generujHeslo(20,1);
 
 
     }

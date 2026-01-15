@@ -125,6 +125,20 @@ public class Uzivatel {
         }
     }
 
+    public void generujHeslo(int Delka,int slozitost) {
+        if (slozitost == 1) {
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < Delka; i++) {
+                int randomNum = (int) (Math.random() * 9);
+                sb.append(randomNum);
+            }
+            System.out.print("Heslo je: " + sb.toString());
+        }
+    }
+
+
+
+
 
 
     public String getJmeno() {
